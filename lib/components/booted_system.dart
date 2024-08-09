@@ -35,6 +35,7 @@ class _BootedSystemState extends State<BootedSystem> {
           WoltSheet().addItemPage(modalSheetContext, textTheme),
         ];
       },
+
       modalTypeBuilder: (context) {
         return WoltModalType.bottomSheet;
       },
@@ -94,7 +95,7 @@ class _BootedSystemState extends State<BootedSystem> {
                         Styles.medium(50, color: Colors.white.withOpacity(0.8)),
                   ),
                   Text(
-                    DateFormat("EEEE, DD MMMM", "de_DE").format(DateTime.now()),
+                    DateFormat("EEEE, dd MMMM", "de_DE").format(DateTime.now()),
                     style:
                         Styles.medium(23, color: Colors.white.withOpacity(0.8)),
                   )

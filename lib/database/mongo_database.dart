@@ -35,17 +35,11 @@ class MongoDatabase {
   /// Synchronisierung mit der Datenbank.
   Future<void> _loginAnonym() async {
     user = await app.logIn(Credentials.anonymous());
-
-
   }
 
   /// Abfrage unseres Kühlschranks in der Datenbank anhand der 'identifyID'.
   /// Nach der Abfrage setzen wir den Kühlschrank in unserem MongoDataRepository
   Future<void> _initFridge() async {
-
-
-
-
     final RealmResults<Fridge> results = realm.query<Fridge>(r'identifyID = $0', [MongoConfiguration.fridgeID]);
     if (results.isEmpty) return;
 
